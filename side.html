@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<title>新しいタブ</title>
+</head>
+<body background="bg1.png">
+<h1 style="text-align: center; background-color: #008080;">Flash Re</h1>
+<script src="js/ruffle.js"></script>
+<script>
+    window.RufflePlayer = window.RufflePlayer || {};
+    window.addEventListener("load", (event) => {
+        const ruffle = window.RufflePlayer.newest();
+        const player = ruffle.createPlayer();
+        container.appendChild(player);
+        player.load({
+            url: "cirno's_arithmetic_school.swf",     // 【必須】Flashファイルの場所
+            backgroundColor: "#000000",   // 【任意】Flashの背景色
+            // backgroundColorの他にも、様々なオプションがあります。（後述）
+        });
+        player.style.width = "800px";     // Flashの横幅サイズ
+        player.style.height = "600px";    // Flashの縦幅サイズ
+    });
+</script>
+</body>
+</html>
